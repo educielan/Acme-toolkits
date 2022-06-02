@@ -75,7 +75,7 @@ public class Chimpum extends AbstractEntity{
 
 	//CONTROL CHECK----------------
 	
-	@OneToOne(optional=true)
+	@OneToOne(optional=false)
 	@Valid
 	protected Item item;
 	
