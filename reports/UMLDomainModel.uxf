@@ -535,8 +535,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1239</x>
-      <y>812</y>
+      <x>1225</x>
+      <y>756</y>
       <w>154</w>
       <h>56</h>
     </coordinates>
@@ -551,12 +551,12 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1134</x>
-      <y>819</y>
-      <w>119</w>
-      <h>21</h>
+      <y>763</y>
+      <w>105</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;130.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -647,8 +647,8 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1176</x>
-      <y>973</y>
+      <x>1197</x>
+      <y>1050</y>
       <w>308</w>
       <h>126</h>
     </coordinates>
@@ -672,11 +672,11 @@ bg=orange
     <coordinates>
       <x>1120</x>
       <y>1022</y>
-      <w>70</w>
-      <h>21</h>
+      <w>91</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;110.0;120.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -866,5 +866,114 @@ bg=orange</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1288</x>
+      <y>840</y>
+      <w>308</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+CHIMPUM
+--
++code: String{Pattern(""), NotBlank}
++creationMoment: Date{NotNull, Temporal(TIMESTAMP), Past}
++title: String{NotBlank, Length(0, 100)}
++description: String{NotBlank, Length(0, 255)}
++startDate: Date{Temporal(TIMESTAMP), NotNull}
++endDate: Date{Temporal(TIMESTAMP), NotNull}
++budget: Money{NotNull}
++info: String{URL}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1505</x>
+      <y>763</y>
+      <w>154</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>The budget must be positive
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1526</x>
+      <y>784</y>
+      <w>21</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1421</x>
+      <y>686</y>
+      <w>210</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>The creationMoment must be in the past. 
+The startDate must be start at least 
+one month after the creationMoment.
+The endDate must be at least one week long.
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1456</x>
+      <y>735</y>
+      <w>21</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1134</x>
+      <y>882</y>
+      <w>168</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=  0..1
+m2=  1
+Is associated with </panel_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1519</x>
+      <y>1008</y>
+      <w>175</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>The CHIMPUM is associated with 
+an ARTEFACT(COMPONENT/TOOL)
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1547</x>
+      <y>959</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
 </diagram>
