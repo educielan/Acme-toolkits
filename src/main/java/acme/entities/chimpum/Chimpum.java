@@ -1,4 +1,4 @@
-package acme.entities.CHIMPUM;
+package acme.entities.chimpum;
 
 import java.util.Date;
 
@@ -33,9 +33,9 @@ public class Chimpum extends AbstractEntity{
 	
 	// Attributes -------------------------------------------------------------
 	
-	
+	//"^[A-Z]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" para ABC-22-05-24
 	@NotBlank
-	@Pattern(regexp ="^\\d{2}\\/(0[1-9]|1[012])\\/(0[1-9]|[12][0-9]|3[01])$")
+	@Pattern(regexp ="^[0-9]{2}-[0-9]{2}-[0-9]{2}$")
 	protected String			code; //no unico porque no especifica en enunciado
 	
 	@NotNull
@@ -72,12 +72,13 @@ public class Chimpum extends AbstractEntity{
 
 	// Relationships ----------------------------------------------------------
 	
-
-	//CONTROL CHECK----------------
 	
+	//CONTROL CHECK----------------
+	@NotNull
 	@OneToOne(optional=false)
 	@Valid
 	protected Item item;
+
 	
 }
 
